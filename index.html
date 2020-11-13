@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>秘密網站</title>
+    <title>計算器</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         body{
@@ -14,22 +14,99 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid" style="height: 100vh;">
+    <div class="container d-flex flex-column justify-content-center" style="height: 100vh;">
 
-        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100%">
-            <h1>
-                恭喜你成功破解第1關
-            </h1>
-            <h3>
-                請記住此密碼<br>
-                明天再試一次
-            </h3>
-            <strong>Hint: 5 2 0 _ _ _ _</strong>
+        <div class="row d-flex flex-row mb-4">
+            <div class="col-md-12">
+                <form action="" method="">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="Aname">A's Name:</label>
+                            <input type="email" class="form-control" id="Aname" value="Alice" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Bname">B's Name:</label>
+                            <input type="text" class="form-control" id="Bname" value="Buck" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Cname">C's Name:</label>
+                            <input type="text" class="form-control" id="Cname" value="Cindy" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Dname">D's Name:</label>
+                            <input type="text" class="form-control" id="Dname" value="David" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row d-flex flex-row mb-4">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-block btn-danger" id="reset">重置</button>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-block btn-warning" id="delete">刪除</button>
+            </div>
+        </div>
+        <div class="row d-flex flex-row mb-4">
+            <div class="col-md-12">
+                <form action="" method="">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="Apoint"><span class="Aname">A</span></label>
+                            <input type="email" class="form-control" id="Apoint" value="0" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Bpoint"><span class="Bname">B</span></label>
+                            <input type="text" class="form-control" id="Bpoint" value="0" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Cpoint"><span class="Cname">C</span></label>
+                            <input type="text" class="form-control" id="Cpoint" value="0" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Dpoint"><span class="Dname">D</span></label>
+                            <input type="text" class="form-control" id="Dpoint" value="0" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <button type="button" id="addPoint" class="btn btn-block btn-primary">新增</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row d-flex flex-row mb-4">
+            <div class="col-md-12">
+                <table class="table" id="tableData">
+                    <thead>
+                        <tr>
+                            <th>回合數</th>
+                            <th><span class="Aname">A</span></th>
+                            <th><span class="Bname">B</span></th>
+                            <th><span class="Cname">C</span></th>
+                            <th><span class="Dname">D</span></th>
+                            <th>總和</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>總分</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
-
 </html>
